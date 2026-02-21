@@ -1,8 +1,8 @@
-// ====== CONFIG: cambia aquí tu WhatsApp, teléfono y correo ======
+// ====== CONFIG: XCIVIL ======
 const BRAND = {
-  whatsapp: "573000000000", // <-- CAMBIA esto
-  phone: "+57 000 000 0000",
-  email: "contacto@xcivil.co",
+  whatsapp: "573166012095",
+  phone: "+57 316 601 2095",
+  email: "yeisonaullon@gmail.com",
   location: "Neiva, Huila, Colombia",
 };
 
