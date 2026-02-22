@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XCIVIL | Ingresar</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="./index.html">
+        <div class="brand__mark">X</div>
+        <div class="brand__text">
+          <div class="brand__name">XCIVIL</div>
+          <div class="brand__tag">Del modelo BIM a la obra</div>
+        </div>
+      </a>
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="./index.html">Volver</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container grid2">
+      <section class="box">
+        <h2>Ingresar</h2>
+        <p class="muted">Accede a tu panel para ver compras y entregables.</p>
+
+        <label class="small">Correo</label>
+        <input class="input" id="loginEmail" type="email" placeholder="tu@correo.com" />
+        <div class="mt"></div>
+        <label class="small">Contraseña</label>
+        <input class="input" id="loginPassword" type="password" placeholder="••••••••" />
+
+        <div class="mt"></div>
+        <button class="btn btn--lime" id="btnLogin">Ingresar</button>
+        <button class="btn btn--ghost" id="btnLogout" style="display:none">Salir</button>
+
+        <p class="small muted mt" id="loginMsg"></p>
+      </section>
+
+      <section class="box">
+        <h2>Crear cuenta</h2>
+        <p class="muted">Compra planos/servicios y recibe los archivos automáticamente.</p>
+
+        <div class="row">
+          <div>
+            <label class="small">Nombre</label>
+            <input class="input" id="regName" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label class="small">Teléfono</label>
+            <input class="input" id="regPhone" placeholder="316..." />
+          </div>
+        </div>
+
+        <div class="mt"></div>
+        <label class="small">Correo</label>
+        <input class="input" id="regEmail" type="email" placeholder="tu@correo.com" />
+        <div class="mt"></div>
+        <label class="small">Contraseña</label>
+        <input class="input" id="regPassword" type="password" placeholder="Mínimo 6 caracteres" />
+
+        <div class="mt"></div>
+        <button class="btn btn--lime" id="btnRegister">Crear cuenta</button>
+
+        <p class="small muted mt" id="regMsg"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
