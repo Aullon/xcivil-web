@@ -80,7 +80,7 @@ p{margin:0 0 10px}
   padding:7px 10px;border-radius:999px;
   font-size:12px;color:rgba(255,255,255,.80);
 }
-.badge::before{content:\"\";width:7px;height:7px;border-radius:999px;background:var(--lime)}
+.badge::before{content:"";width:7px;height:7px;border-radius:999px;background:var(--lime)}
 .hero__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
 /* Buttons */
@@ -242,7 +242,7 @@ textarea{min-height:110px;resize:vertical}
 .fact{display:flex;justify-content:space-between;gap:10px;padding:12px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
 .check{list-style: none; padding-left:0}
 .check li{padding-left:0;display:flex;gap:10px;align-items:flex-start}
-.check li::before{content:\"✓\";color:var(--lime);font-weight:900}
+.check li::before{content:"✓";color:var(--lime);font-weight:900}
 
 /* Responsive */
 @media (max-width: 980px){
