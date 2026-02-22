@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!-- Topbar -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#inicio" aria-label="XCIVIL inicio">
@@ -29,8 +30,11 @@
       </nav>
 
       <div class="topbar__cta">
-        <a class="btn btn--ghost" href="./login.html">Ingresar</a>
-        <a class="btn btn--lime" href="./dashboard.html">Mi panel</a>
+        <a class="btn btn--ghost" href="tel:+573166012095">Llamar</a>
+        <a class="btn btn--lime" target="_blank" rel="noreferrer"
+           href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20una%20cotizaci%C3%B3n%20BIM%20(coordinaci%C3%B3n%20%2F%205D%20%2F%20interventor%C3%ADa).">
+          WhatsApp
+        </a>
       </div>
 
       <button class="navbtn" id="navbtn" aria-label="Abrir menú" aria-expanded="false">
@@ -38,18 +42,17 @@
       </button>
     </div>
 
+    <!-- Mobile nav -->
     <div class="container navmobile" id="navmobile" hidden>
       <a href="#proyectos">Proyectos</a>
       <a href="#servicios">Servicios</a>
       <a href="#planos">Planos</a>
       <a href="#bim">BIM</a>
       <a href="#contacto">Contacto</a>
-      <hr class="hr" />
-      <a href="./login.html">Ingresar</a>
-      <a href="./dashboard.html">Mi panel</a>
     </div>
   </header>
 
+  <!-- Hero -->
   <main id="inicio" class="hero">
     <div class="glow" aria-hidden="true"></div>
     <div class="container hero__grid">
@@ -72,25 +75,25 @@
 
         <div class="hero__actions">
           <a class="btn btn--lime" href="#contacto">Solicitar cotización</a>
-          <a class="btn btn--ghost" href="./planos.html" style="display:none">Ver tienda (opcional)</a>
+          <button class="btn btn--ghost" id="openProject">Ver ejemplo de proyecto</button>
         </div>
 
         <div class="stats">
           <div class="stat">
-            <div class="stat__value">BIM</div>
-            <div class="stat__label">Foco principal</div>
+            <div class="stat__value">15+</div>
+            <div class="stat__label">Proyectos entregados</div>
           </div>
           <div class="stat">
-            <div class="stat__value">PSE</div>
-            <div class="stat__label">Pagos por Wompi</div>
+            <div class="stat__value">30+</div>
+            <div class="stat__label">Modelos BIM</div>
           </div>
           <div class="stat">
-            <div class="stat__value">Panel</div>
-            <div class="stat__label">Entregas automáticas</div>
+            <div class="stat__value">5+</div>
+            <div class="stat__label">Años de experiencia</div>
           </div>
           <div class="stat">
-            <div class="stat__value">Admin</div>
-            <div class="stat__label">Control total</div>
+            <div class="stat__value">20+</div>
+            <div class="stat__label">Clientes</div>
           </div>
         </div>
       </section>
@@ -98,89 +101,140 @@
       <aside class="hero__panel">
         <div class="panel">
           <div class="panel__top">
-            <div class="panel__title">Proyectos reales</div>
-            <div class="panel__meta">Con imágenes</div>
+            <div class="panel__title">Dashboard BIM</div>
+            <div class="panel__meta">Demo visual</div>
           </div>
 
           <div class="panel__grid">
             <div class="cardmini">
-              <div class="cardmini__k">Render 1</div>
-              <div class="cardmini__t">Cabaña / Vivienda</div>
+              <div class="cardmini__k">Módulo 1</div>
+              <div class="cardmini__t">Clashes críticos</div>
               <div class="bar"></div>
             </div>
             <div class="cardmini">
-              <div class="cardmini__k">Render 2</div>
-              <div class="cardmini__t">Estructura / Obra</div>
+              <div class="cardmini__k">Módulo 2</div>
+              <div class="cardmini__t">Cantidad por partidas</div>
               <div class="bar"></div>
             </div>
             <div class="cardmini">
-              <div class="cardmini__k">Render 3</div>
-              <div class="cardmini__t">Proyecto tipo</div>
+              <div class="cardmini__k">Módulo 3</div>
+              <div class="cardmini__t">RFI / Cambios</div>
               <div class="bar"></div>
             </div>
             <div class="cardmini">
-              <div class="cardmini__k">Render 4</div>
-              <div class="cardmini__t">Proyecto tipo</div>
+              <div class="cardmini__k">Módulo 4</div>
+              <div class="cardmini__t">Avance (4D)</div>
               <div class="bar"></div>
             </div>
           </div>
 
           <div class="panel__deliver">
             <div class="panel__deliverTop">
-              <div class="panel__title">Entregables</div>
-              <div class="panel__meta">PDF • DWG • IFC</div>
+              <div class="panel__title">Entrega estándar</div>
+              <div class="panel__meta">IFC • BCF • PDF • XLSX</div>
             </div>
             <div class="chips">
-              <span class="chip">Planos</span>
-              <span class="chip">Memorias</span>
-              <span class="chip">5D</span>
-              <span class="chip">Clashes</span>
+              <span class="chip">BEP Lite</span>
+              <span class="chip">Clash Report</span>
+              <span class="chip">Metrados</span>
+              <span class="chip">Actas</span>
             </div>
+          </div>
+        </div>
+
+        <div class="panel panel--split">
+          <div class="split">
+            <div class="split__t">Constructoras</div>
+            <div class="split__d">Coordinación y cantidades para entregar más rápido.</div>
+          </div>
+          <div class="split">
+            <div class="split__t">Sector público</div>
+            <div class="split__d">Interventoría BIM: control de entregables y trazabilidad.</div>
           </div>
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- PROYECTOS (dinámico desde Supabase) -->
+  <!-- Proyectos -->
   <section id="proyectos" class="section">
     <div class="container">
       <div class="section__head">
         <span class="badge">Proyectos</span>
-        <h2>Proyectos</h2>
-        <p>Galería con imágenes reales (admin puede agregar más desde su panel).</p>
+        <h2>Experiencia aplicada</h2>
+        <p>Listado estilo “constructora” con ficha tipo proyecto (como Amarilo), adaptado a entregables BIM.</p>
       </div>
 
-      <div class="grid3" id="projectsGrid"></div>
-      <div class="center mt">
-        <a class="btn btn--ghost" href="./dashboard.html">Ver mis compras / entregables</a>
+      <div class="grid3" id="projectsGrid">
+        <!-- JS inserts cards -->
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS (dinámico desde Supabase Products kind=service) -->
+  <!-- Servicios -->
   <section id="servicios" class="section">
     <div class="container">
       <div class="section__head">
         <span class="badge">Servicios</span>
-        <h2>Servicios BIM</h2>
-        <p>Compra con PSE y recibe el entregable en tu panel (si aplica).</p>
+        <h2>Qué hacemos</h2>
+        <p>Paquetes claros: fácil de cotizar, fácil de ejecutar, fácil de escalar.</p>
       </div>
 
-      <div class="grid3" id="servicesGrid"></div>
+      <div class="grid3" id="servicesGrid">
+        <!-- JS inserts cards -->
+      </div>
     </div>
   </section>
 
-  <!-- PLANOS (dinámico desde Supabase Products kind=plan) -->
+  <!-- Planos (Tienda) -->
   <section id="planos" class="section">
     <div class="container">
       <div class="section__head">
-        <span class="badge">Planos</span>
-        <h2>Catálogo de planos</h2>
-        <p>Pagas por PSE (Wompi) y descargas en tu panel.</p>
+        <span class="badge">Tienda</span>
+        <h2>Planos listos para construir</h2>
+        <p>Catálogo digital: compra por WhatsApp (rápido) y upgrade a adaptación cuando lo necesiten.</p>
       </div>
 
-      <div class="grid3" id="plansGrid"></div>
+      <div class="grid2">
+        <div class="box">
+          <h3>Cómo funciona</h3>
+          <p class="muted">
+            Compra digital, descarga (cuando tengas la tienda), y opción de upgrade:
+            adaptación a lote/ciudad, revisión estructural y soporte.
+          </p>
+
+          <div class="twocol">
+            <div class="boxmini">
+              <h4>Incluye</h4>
+              <ul>
+                <li>Planos arquitectónicos (PDF)</li>
+                <li>Planos estructurales tipo (PDF)</li>
+                <li>Detalles constructivos</li>
+                <li>Cuadro de áreas</li>
+              </ul>
+            </div>
+
+            <div class="boxmini">
+              <h4>No incluye</h4>
+              <ul>
+                <li>Firma para licencia (si aplica)</li>
+                <li>Estudio de suelos</li>
+                <li>Adaptación a lote/ciudad</li>
+                <li>Cálculo estructural específico</li>
+              </ul>
+            </div>
+          </div>
+
+          <a class="btn btn--ghost" href="#contacto">Quiero adaptar mi plano</a>
+        </div>
+
+        <div class="box">
+          <h3>Catálogo destacado</h3>
+          <div class="store" id="planStore">
+            <!-- JS inserts items -->
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -189,44 +243,105 @@
     <div class="container">
       <div class="section__head">
         <span class="badge">Metodología</span>
-        <h2>BIM como sistema</h2>
-        <p>Proceso repetible: BEP Lite, control de cambios, evidencias y entregables.</p>
+        <h2>BIM como sistema (no solo modelado)</h2>
+        <p>Proceso repetible y auditable: evidencia, actas, entregables y control de versiones.</p>
       </div>
 
       <div class="grid2">
         <div class="box">
-          <h3>Pipeline</h3>
-          <ul>
-            <li>Diagnóstico</li>
-            <li>BEP Lite</li>
-            <li>Ejecución (Clashes/5D)</li>
-            <li>Cierre (IFC/BCF/PDF/XLSX)</li>
-          </ul>
+          <h3>Pipeline XCIVIL</h3>
+          <div class="steps">
+            <div class="step"><span>1</span><div><b>Diagnóstico</b><p class="muted">Objetivo, alcance, fase, entregables, riesgos.</p></div></div>
+            <div class="step"><span>2</span><div><b>BEP Lite</b><p class="muted">Nomenclatura, LOD, calendario, roles.</p></div></div>
+            <div class="step"><span>3</span><div><b>Ejecución</b><p class="muted">Clashes, 5D, cambios, reportes.</p></div></div>
+            <div class="step"><span>4</span><div><b>Cierre</b><p class="muted">IFC/BCF/PDF/XLSX + lecciones aprendidas.</p></div></div>
+          </div>
+
+          <div class="chips chips--wrap">
+            <span class="chip">BEP Lite</span>
+            <span class="chip">Matriz de entregables</span>
+            <span class="chip">Clash report</span>
+            <span class="chip">Log de cambios</span>
+            <span class="chip">Metrados</span>
+            <span class="chip">Actas</span>
+            <span class="chip">IFC final</span>
+            <span class="chip">Cierre</span>
+          </div>
         </div>
+
         <div class="box">
-          <h3>Acceso</h3>
-          <p class="muted">Los entregables se desbloquean solo cuando el pago queda aprobado.</p>
-          <a class="btn btn--lime" href="./login.html">Crear cuenta / Ingresar</a>
+          <h3>Casos de uso</h3>
+          <div class="usecases">
+            <div class="usecase">Precontractual (licitación)</div>
+            <div class="usecase">Diseño coordinado</div>
+            <div class="usecase">Obra (clashes)</div>
+            <div class="usecase">Control 5D</div>
+            <div class="usecase">As-built</div>
+          </div>
+          <a class="btn btn--lime" href="#contacto">Agenda diagnóstico (15 min)</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- Contacto -->
   <section id="contacto" class="section">
     <div class="container">
       <div class="section__head">
         <span class="badge">Contacto</span>
-        <h2>Contáctanos</h2>
-        <p>Para proyectos a medida, escríbenos por WhatsApp.</p>
+        <h2>Cotiza en 15 minutos</h2>
+        <p>En la práctica, WhatsApp convierte mejor. Este formulario también te sirve como guía.</p>
       </div>
 
-      <div class="box">
-        <a class="btn btn--lime" target="_blank" rel="noreferrer"
-           href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20una%20cotizaci%C3%B3n%20BIM.">
-          WhatsApp: +57 316 601 2095
-        </a>
-        <p class="muted mt">Correo: yeisonaullon@gmail.com</p>
+      <div class="grid2">
+        <div class="box">
+          <form id="quoteForm">
+            <div class="formgrid">
+              <label>Nombre
+                <input name="nombre" placeholder="Tu nombre" required />
+              </label>
+              <label>Empresa
+                <input name="empresa" placeholder="Constructora / Entidad" />
+              </label>
+              <label>Correo
+                <input name="correo" placeholder="tu@correo.com" type="email" />
+              </label>
+              <label>Celular
+                <input name="celular" placeholder="+57…" />
+              </label>
+              <label class="full">¿Qué necesitas?
+                <textarea name="necesidad" placeholder="Ej: Coordinación BIM (ARQ/STR/MEP) para obra – entrega en 3 semanas" required></textarea>
+              </label>
+            </div>
+
+            <div class="formactions">
+              <button class="btn btn--ghost" type="submit">Enviar a WhatsApp</button>
+              <a class="btn btn--lime" target="_blank" rel="noreferrer"
+                 href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20agendar%20diagn%C3%B3stico%20BIM%20de%2015%20minutos.">
+                Escribir directo
+              </a>
+            </div>
+            <p class="small muted">Al enviar aceptas tratamiento de datos. Respuesta en horario laboral.</p>
+          </form>
+        </div>
+
+        <div class="box">
+          <h3>Información</h3>
+          <div class="infobox">
+            <div><b>Ubicación</b><span class="muted">Neiva, Huila, Colombia</span></div>
+            <div><b>Teléfono</b><span class="muted">+57 316 601 2095</span></div>
+            <div><b>Correo</b><span class="muted">yeisonaullon@gmail.com</span></div>
+          </div>
+
+          <div class="ctaBox">
+            <div class="small muted">CTA rápido</div>
+            <div class="ctaBox__title">Agenda diagnóstico (15 min)</div>
+            <a class="btn btn--lime" target="_blank" rel="noreferrer"
+               href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20agendar%20diagn%C3%B3stico%20BIM%20de%2015%20minutos.">
+              Agendar
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -238,24 +353,78 @@
         <div class="small muted">Del modelo BIM a la obra • Neiva, Huila</div>
       </div>
       <div class="footer__links">
-        <a href="./login.html">Ingresar</a>
-        <a href="./dashboard.html">Mi panel</a>
-        <a href="./admin.html">Admin</a>
+        <a href="#">Política de datos</a>
+        <a href="#">Términos</a>
+        <a href="#">PQRS</a>
       </div>
     </div>
   </footer>
 
+  <!-- Floating WhatsApp -->
   <a class="whats" target="_blank" rel="noreferrer"
-     href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20informaci%C3%B3n%20de%20servicios%20BIM.">
+     href="https://wa.me/573166012095?text=Hola%20XCIVIL%2C%20quiero%20informaci%C3%B3n%20de%20servicios%20BIM%20(coordinaci%C3%B3n%20%2F%205D%20%2F%20interventor%C3%ADa).">
     WhatsApp
   </a>
 
-  <!-- Supabase JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Project Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Ficha de proyecto">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title" id="modalTitle">Proyecto</div>
+          <div class="small muted" id="modalMeta">Neiva • 2026 • BIM</div>
+        </div>
+        <button class="btn btn--ghost" id="closeModal">Cerrar</button>
+      </div>
 
-  <!-- Wompi Widget -->
-  <script src="https://checkout.wompi.co/widget.js"></script>
+      <div class="modal__body">
+        <div class="modalgrid">
+          <div class="box">
+            <h3>Fotos / Evidencia</h3>
+            <div class="gallery" id="modalGallery"></div>
+          </div>
 
-  <script src="./app.js"></script>
+          <div class="box">
+            <h3>Ficha</h3>
+            <div class="facts" id="modalFacts"></div>
+            <a class="btn btn--lime" target="_blank" rel="noreferrer" id="modalCta">Solicitar cotización</a>
+          </div>
+        </div>
+
+        <div class="grid2 mt">
+          <div class="box">
+            <h3>Descripción</h3>
+            <p class="muted" id="modalDesc"></p>
+            <div class="grid2 mt">
+              <div class="boxmini">
+                <h4>Planos y ubicación</h4>
+                <p class="small muted">Aquí pondrás mapa, PDFs y enlaces (cuando los tengas).</p>
+              </div>
+              <div class="boxmini">
+                <h4>Avances / Reportes</h4>
+                <p class="small muted">Sección para reportes semanales/mensuales, ideal interventoría.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Checklist entregables</h3>
+            <ul class="check">
+              <li>BEP Lite</li>
+              <li>IFC/REV</li>
+              <li>BCF</li>
+              <li>Informe</li>
+              <li>Actas</li>
+              <li>Log de cambios</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
