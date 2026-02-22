@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XCIVIL | Admin</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="./index.html">
+        <div class="brand__mark">X</div>
+        <div class="brand__text">
+          <div class="brand__name">XCIVIL</div>
+          <div class="brand__tag">Admin</div>
+        </div>
+      </a>
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="./dashboard.html">Mi panel</a>
+        <button class="btn btn--lime" id="btnLogout">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <section class="box">
+        <h2>Administrador</h2>
+        <p class="muted" id="adminInfo">Validando permisos…</p>
+      </section>
+
+      <div class="mt"></div>
+
+      <div class="grid2">
+        <section class="box">
+          <h3>Agregar Proyecto</h3>
+
+          <label class="small">Título</label>
+          <input class="input" id="pTitle" placeholder="Cabaña / Vivienda / etc." />
+
+          <div class="row mt">
+            <div>
+              <label class="small">Ciudad</label>
+              <input class="input" id="pCity" placeholder="Neiva" />
+            </div>
+            <div>
+              <label class="small">Año</label>
+              <input class="input" id="pYear" placeholder="2026" />
+            </div>
+          </div>
+
+          <div class="mt"></div>
+          <label class="small">Tipo</label>
+          <input class="input" id="pType" placeholder="BIM / Planos / Estructuras" />
+
+          <div class="mt"></div>
+          <label class="small">Resumen</label>
+          <textarea class="textarea" id="pSummary" placeholder="Descripción corta…"></textarea>
+
+          <div class="mt"></div>
+          <label class="small">Cover URL (ej: assets/proy1.png o URL pública)</label>
+          <input class="input" id="pCover" placeholder="assets/project1.png" />
+
+          <div class="mt"></div>
+          <label class="small">Galería (URLs separadas por coma)</label>
+          <input class="input" id="pGallery" placeholder="assets/a.png, assets/b.png" />
+
+          <div class="mt"></div>
+          <label class="small">Métricas (JSON) (opcional)</label>
+          <textarea class="textarea" id="pMetrics" placeholder='[{"k":"Área","v":"120 m²"}]'></textarea>
+
+          <div class="mt"></div>
+          <button class="btn btn--lime" id="btnAddProject">Guardar proyecto</button>
+          <p class="small muted mt" id="projectMsg"></p>
+        </section>
+
+        <section class="box">
+          <h3>Productos (Planos/Servicios)</h3>
+
+          <label class="small">Nombre</label>
+          <input class="input" id="prodName" placeholder="Plano Cabaña 60m²" />
+
+          <div class="row mt">
+            <div>
+              <label class="small">Tipo</label>
+              <select class="select" id="prodKind">
+                <option value="plan">plan</option>
+                <option value="service">service</option>
+              </select>
+            </div>
+            <div>
+              <label class="small">Precio (COP)</label>
+              <input class="input" id="prodPrice" type="number" placeholder="199000" />
+            </div>
+          </div>
+
+          <div class="mt"></div>
+          <label class="small">Descripción</label>
+          <textarea class="textarea" id="prodDesc" placeholder="Incluye PDF + DWG + detalles…"></textarea>
+
+          <div class="mt"></div>
+          <button class="btn btn--lime" id="btnAddProduct">Crear producto</button>
+          <p class="small muted mt" id="productMsg"></p>
+
+          <div class="mt"></div>
+          <hr class="hr" />
+
+          <h3 class="mt">Asociar entregable a producto</h3>
+          <p class="muted small">Sube el archivo al bucket <b>deliverables</b> y luego pega la ruta aquí.</p>
+
+          <label class="small">Producto</label>
+          <select class="select" id="assetProductSelect"></select>
+
+          <div class="row mt">
+            <div>
+              <label class="small">file_path (bucket)</label>
+              <input class="input" id="assetPath" placeholder="planos/cabana60.zip" />
+            </div>
+            <div>
+              <label class="small">file_name</label>
+              <input class="input" id="assetName" placeholder="Cabana_60m2.zip" />
+            </div>
+          </div>
+
+          <div class="mt"></div>
+          <button class="btn btn--lime" id="btnAddAsset">Guardar entregable</button>
+          <p class="small muted mt" id="assetMsg"></p>
+        </section>
+      </div>
+
+      <div class="mt"></div>
+
+      <section class="box">
+        <h3>Usuarios / Compras (vista rápida)</h3>
+        <table class="table" id="adminPurchases">
+          <thead><tr><th>Usuario</th><th>Producto</th><th>Estado</th><th>Ref</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
